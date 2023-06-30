@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bcryptjs/2.2.0/bcrypt.min.js" integrity="sha512-BJZhA/ftU3DVJvbBMWZwp7hXc49RJHq0xH81tTgLlG16/OkDq7VbNX6nUnx+QY4bBZkXtJoG0b0qihuia64X0w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bcryptjs/2.4.3/bcrypt.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bcryptjs/2.4.3/bcrypt.min.js"></script>
+ -->
+
+
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div>
+            <div class="register-box">
+                <h1 class = "headingText">Registration Form</h1>
+                <div class="formdiv">
+                    <form action="" method="post" id="register-form">
+                        <div class="first row">
+                               <div class="name col1 formelement">
+                                <div class="name element-label">
+                                    <label for="name" class="form_label">Name:*</label><br>
+                                </div>
+                                <input type="text" name="name" class="inp" id="firstName" value="" placeholder="first name" required><br>
+                                <input type="text" name="name" class="inp" id="lastName" value="" placeholder = "last name" required>
+                            </div>
+                            <div class="phone col2 formelement">        
+                                <div class="phone element-label">
+                                    <label for="name" class="form_label">Phone:</label>
+                                </div>
+                                <input type="tel" name="phoneNo" class="inp" id="phoneNo" placeholder="Phone no" value="" maxlength="10">    
+                            </div>
+                            <div class="dob col3 formelement">    
+                                <div class="dob element-label">
+                                    <label for="name" class="form_label">Date of birth:*</label><br>
+                                    <input type="tel" name="mm" class="inp" id="mm" placeholder="mm" maxlength="2" size="1" value="01" required>
+                                    <input type="tel" name="dd" class="inp" id="dd" placeholder="dd" maxlength="2" size="1" value="12" required>
+                                    <input type="tel" name="yyyy" class="inp" id="yyyy" placeholder="yyyy" maxlength="4"  size="2" value="2020" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="second row">
+                            <div class="address col1 formelement">
+                                <div class="address element-label">
+                                    <label for="address" class="form_label">Address:</label>
+                                </div>
+                                <input type="text" name="address" class="inp" id="address">
+                            </div>
+                            <div class="gender col2 formelement">
+                                <div class="gender element-label">
+                                    <label for="gender" class="form_label">Gender:</label>
+                                </div>
+                                <div>
+                                    <input type="radio" class="inp" name="gender" id="male" checked>
+                                    <label for="male" class="form_label">Male</label>
+                                </div>
+                                <div>
+                                    <input type="radio" class="inp" name="gender" id="female">
+                                    <label for="female" class="form_label">Female</label>
+                                </div>
+                                <div>
+                                    <input type="radio" class="inp" name="gender" id="others">
+                                    <label for="others" class="form_label">Others</label>
+                                </div>    
+                            </div>                                                           
+                        </div>
+                        <div class="third row">
+                            <div class="email col1 formelement">
+                                <div class="email element-label">
+                                    <label for="email" class="form_label">Email:*</label>
+                                </div>
+                                <input type="text" name="form-email" class="inp" id="form-email" required>
+                            </div>
+                            <div class="password col2 formelement">
+                                <div class="password element-label">
+                                    <label for="password" class="form_label">Password:*</label><br>
+                                </div>
+                                <input type="password" name="password" class="inp" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                                <i class="bi bi-eye-slash" id="togglePass"></i>
+                                <div class="re-password element-label">
+                                    <label for="re-password" class="form_label">Retype Password:*</label><br>
+                                </div>
+                                <input type="password" name="re-password" class="inp" id="re-pass" required>
+                                <i class="bi bi-eye-slash" id="toggleRePass"></i>
+                            </div>
+                            <div class="submit col3 formelement"> 
+                                <button type="button" name="form-submit" class="submitbtn" id="user-form">Submit</button><br>
+                                <button class="submitbtn" id="discard">Discard</button>
+                            </div>
+                        </div>    
+                    </form>
+                </div>
+            </div>
+        </div> 
+    </section>
+    <script src="../firebase.js"></script>
+    <script src="register.js"></script>
+    <!-- <script src="bcrypt.js"></script> -->
+</body>
+</html>

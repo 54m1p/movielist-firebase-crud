@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"/>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+</head>
+<body>
+    <div class="login-container">
+        <div class = "login-box">
+            <h1 class = "headingText">Login/Signup</h1>
+            <div class = "loginDetails">
+                <div class="loginInput"><input type="text" id="login-email" class="inp" placeholder="Enter Email"><br></div>
+                <div class="loginInput"><input type="password" id="login-pswd" class="inp"   placeholder="Enter password"><i class="bi bi-eye-slash" id="togglePass"></i></div>
+            </div>
+            <div class="login-btndiv">
+                <button id="loginBtn" class= "submitbtn" id="login-btn">Login</button>
+                <button id="registerBtn" class="submitbtn"> <a href="register.html">Register</a></button>
+            </div>
+        </div>
+</div>
+<script src="../firebase.js"></script>
+<script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css">
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+</head>
+<body onload = 'showListFn()'>
+  <main class=" main-container">
+
+    <section>  
+      <!-- <button id="show-list-btn">Show List</button> -->
+      <div id="show-box">
+        <h1 id="movielist-h1">Movies List</h1>
+        <table class="movie-list">
+          <thead>
+            <tr>
+              <th>Movie</th>
+              <th>Genre</th>
+              <th>Release Date</th>
+              <th>Country</th>
+              <th>Rating</th>
+              <th>Runtime</th>
+            </tr>
+          </thead>
+          <tbody id="movie-tbody"></tbody>
+        </table>
+        <div class="add-movie-div">
+          <button id="add-movie-btn">Add Movie</button>
+        </div>
+    </div>
+  </section>
+  </main>  
+    <script src ="firebase.js"></script>
+    <script src="showList.js"></script>
+</body>
+</html>

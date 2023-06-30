@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+</head>
+<body>
+    <section class="get-movie-box" id="get-movie-box">
+        <div><h1 id="movie-details-h1">Add a movie</h1></div>
+        <form action="#" id="movie-form" method="post">
+          <label for="movie-title">Title*</label>
+          <input type="text" name="movie-title" id="movie-title"><br>
+          <label for="movie-genre">Genre</label>
+          <select name="movie-genre" id="movie-genre">
+            <option value="" class="genre-list">Action</option>
+            <option value="" class="genre-list">Thriller</option>
+            <option value="" class="genre-list">Drama</option>
+            <option value="" class="genre-list">Comedy</option>
+            <option value="" class="genre-list">Adventure</option>
+            <option value="" class="genre-list">Sci-fi</option>
+            <option value="" class="genre-list">Fiction</option>
+            <option value="" class="genre-list">Mystry</option>
+            <option value="" class="genre-list">Horror</option>
+          </select><br>
+          <div id="selected-genre" class="selected-genre"></div>
+          <label for="release-date">Release date*</label>
+          <input type="tel" name="release-date" id="release-date" maxlength="4"><br>
+          <label for="country">Country*</label>
+          <input type="text" name="country" id="country"><br>
+          <label for="rating">Rating</label>
+          <input type="number" name="rating" id="rating"><br>
+          <label for="runtime">Runtime*</label>
+          <input type="text" name="runtime" id="runtime"><br>
+          <button  id="movie-submit">Submit</button>
+        </form>
+        <button id ='go-back-btn'>Go Back</button>
+      </section>
+      <script src="firebase.js"></script>
+      <script src="addMovie.js"></script>
+      <script src="editMovie.js"></script>
+</body>
+</html>
